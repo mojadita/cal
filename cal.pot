@@ -1,82 +1,30 @@
-# $Id: cal.pot,v 1.1 2003/04/21 20:51:48 luis Exp $
-# Author: Luis.Colorado@HispaLinux.ES
-# Date: Mon Apr 21 22:17:27 MEST 2003
-# Copyright (C) 2003 Luis Colorado.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-04-21 23:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
 
-#: cal.c:71
+#: cal.c:75
 #, c-format
 msgid "%s: incorrect 2nd. parameter.\n"
 msgstr ""
 
-#: cal.c:81
+#: cal.c:85
 #, c-format
 msgid "%s: incorrect 1st. parameter.\n"
 msgstr ""
 
-#: cal.c:91
+#: cal.c:95
 #, c-format
 msgid "%s: incorrect number of parameters.\n"
 msgstr ""
-
-# Añadidos para ajustar los datos leidos por tabla.
-# Meses.
-msgid "January"
-msgstr ""
-
-msgid "February"
-msgstr ""
-
-msgid "March"
-msgstr ""
-
-msgid "April"
-msgstr ""
-
-msgid "May"
-msgstr ""
-
-msgid "June"
-msgstr ""
-
-msgid "July"
-msgstr ""
-
-msgid "August"
-msgstr ""
-
-msgid "September"
-msgstr ""
-
-msgid "October"
-msgstr ""
-
-msgid "November"
-msgstr ""
-
-msgid "December"
-msgstr ""
-
-# Días de la semana.
-msgid "Monday"
-msgstr ""
-
-msgid "Tuesday"
-msgstr ""
-
-msgid "Wednesday"
-msgstr ""
-
-msgid "Thursday"
-msgstr ""
-
-msgid "Friday"
-msgstr ""
-
-msgid "Saturday"
-msgstr ""
-
-msgid "Sunday"
-msgstr ""
-
-# $Id: cal.pot,v 1.1 2003/04/21 20:51:48 luis Exp $
