@@ -1,0 +1,31 @@
+.TH CAL 1 "GNU Shell Utilities" "FSF"
+.SH NOMBRE
+cal \- Este programa imprime un calendario del mes o del año indicados.
+Si el mes contiene el día de la fecha actual, éste se escribe entre
+corchetes.
+
+.SH USO
+\fBcal\fP [\fIaño\fP | \fImes\fP] [\fImes\fP | \fIaño\fP]
+
+.SH DESCRIPCIÓN
+El mes se reconoce por ser un número de 1 a 12 (así pues, no se
+podrá representar un año anterior al año 13) y el año por ser un
+número mayor que 12. Cuando no se especifica ningún parámetro, se
+asume por defecto el calendario del mes actual del año actual. Si
+solo se especifica el mes, se entiende el calendario del mes indicado
+en el año actual. Si solo se especifica el año, se entiende
+un calendario completo del año indicado. Si se especifican los dos,
+se entendera un calendario del mes y año indicados, siempre y cuando
+uno sea mes y el otro año (en caso de que los dos sean meses o
+años, se considerará solamente el último indicado). El calendario
+muestra la fecha actual encerrándola entre corchetes cuando el
+calendario es de un solo mes.
+El calendario tiene en cuenta la corrección realizada en 1752 para
+cambiar de calendario juliano (bisiestos cada cuatro años) a
+calendario gregoriano (bisiestos múltiplos de 4 menos multiplos de
+100 menos múltiplos de 400) de eliminar los dias 3 al 13 de septiembre
+de 1752. Probar "cal 1752" ó "cal 9 1752".
+
+.SH AUTOR
+Este programa ha sido desarrollado por
+Luis Colorado <luis.colorado@slug.ctv.es> el 15 de enero de 1.990
