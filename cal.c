@@ -1,8 +1,11 @@
-/* $Id: cal.c,v 1.4 2003/04/21 20:51:48 luis Exp $
+/* $Id: cal.c,v 1.5 2003/04/21 22:21:06 luis Exp $
  * cal.c -- programa para imprimir un calendario.
  * Autor: Luis Colorado.
  * Fecha: 15.1.90.
  * $Log: cal.c,v $
+ * Revision 1.5  2003/04/21 22:21:06  luis
+ * *** empty log message ***
+ *
  * Revision 1.4  2003/04/21 20:51:48  luis
  * Añadido soporte internacional, para mostrar los mensajes y los meses y días
  * de la semana en el idioma local configurado.
@@ -72,8 +75,9 @@ char *argv [];
         i = atoi (argv [2]);
         if (i <= 0) {
             fprintf (stderr,
-                	gettext("%s: incorrect 2nd. parameter.\n"),
+                	gettext("%s: incorrect 2nd. parameter."),
                 	nomprog);
+			puts("");
 		    exit (1);
         }
         if (i > 12) anio = i;
@@ -82,8 +86,9 @@ char *argv [];
         i = atoi (argv [1]);
         if (i <= 0){
             fprintf (stderr,
-                	gettext("%s: incorrect 1st. parameter.\n"),
+                	gettext("%s: incorrect 1st. parameter."),
                 	nomprog);
+			puts("");
             exit (1);
         }
         if (i > 12) anio = i;
@@ -92,8 +97,9 @@ char *argv [];
         break;
     default:
         fprintf (stderr,
-                 gettext("%s: incorrect number of parameters.\n"),
+                 gettext("%s: incorrect number of parameters."),
                  nomprog);
+		puts("");
         exit (1);
     }
     /* programa principal */
@@ -261,4 +267,4 @@ formato_corto (mes, anio)
     printf ("\n");
 } /* formato_corto */
 
-/* $Id: cal.c,v 1.4 2003/04/21 20:51:48 luis Exp $ */
+/* $Id: cal.c,v 1.5 2003/04/21 22:21:06 luis Exp $ */

@@ -1,26 +1,46 @@
-# $Id: en_US.po,v 1.1 2003/04/21 20:51:48 luis Exp $
-# Author: Luis.Colorado@HispaLinux.ES
-# Date: Mon Apr 21 22:17:27 MEST 2003
+# $Id: en_US.po,v 1.2 2003/04/21 22:21:06 luis Exp $
+# Author: Luis Colorado <luis.colorado@hispalinux.es>
+# Date: Mon Apr 21 23:40:26 MEST 2003
 # Copyright (C) 2003 Luis Colorado.
 #
 
-#: cal.c:71
+#: cal.c:75
 #, c-format
-msgid "%s: incorrect 2nd. parameter.\n"
-msgstr "%s: 2nd. parameter incorrect.\n"
+msgid "%s: incorrect 2nd. parameter."
+msgstr "%s: incorrect 2nd. parameter."
 
-#: cal.c:81
+#: cal.c:86
 #, c-format
-msgid "%s: incorrect 1st. parameter.\n"
-msgstr "%s: 1st. parameter incorrect.\n"
+msgid "%s: incorrect 1st. parameter."
+msgstr "%s: incorrect 1st. parameter."
 
-#: cal.c:91
+#: cal.c:97
 #, c-format
-msgid "%s: incorrect number of parameters.\n"
-msgstr "%s: incorrect number of parameters.\n"
+msgid "%s: incorrect number of parameters."
+msgstr "%s: incorrect number of parameters."
 
-# Añadidos para ajustar los datos leidos por tabla.
-# Meses.
+# Month and day strings.
+msgid "Monday"
+msgstr "Monday"
+
+msgid "Tuesday"
+msgstr "Tuesday"
+
+msgid "Wednesday"
+msgstr "Wednesday"
+
+msgid "Thursday"
+msgstr "Thursday"
+
+msgid "Friday"
+msgstr "Friday"
+
+msgid "Saturday"
+msgstr "Saturday"
+
+msgid "Sunday"
+msgstr "Sunday"
+
 msgid "January"
 msgstr "January"
 
@@ -57,26 +77,3 @@ msgstr "November"
 msgid "December"
 msgstr "December"
 
-# Días de la semana.
-msgid "Monday"
-msgstr "Monday"
-
-msgid "Tuesday"
-msgstr "Tuesday"
-
-msgid "Wednesday"
-msgstr "Wednesday"
-
-msgid "Thursday"
-msgstr "Thursday"
-
-msgid "Friday"
-msgstr "Friday"
-
-msgid "Saturday"
-msgstr "Saturday"
-
-msgid "Sunday"
-msgstr "Sunday"
-
-# $Id: en_US.po,v 1.1 2003/04/21 20:51:48 luis Exp $
