@@ -1,8 +1,11 @@
-
-/* bisiesto.c -- rutina para comprobar si un año es bisiesto.
+/* $Id: bisiesto.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+ * bisiesto.c -- rutina para comprobar si un año es bisiesto.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: bisiesto.c,v $
+ * Revision 1.2  2000/07/17 00:27:52  luis
+ * arreglos de formateo.
+ *
  * Revision 1.1  1995/09/30 00:24:06  luis
  * Initial revision
  *
@@ -58,4 +61,4 @@ int bisiesto (anio)
      return (anio % 4 == 0);
 }
 
-/* fin de bisiesto.c */
+/* $Id: bisiesto.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */

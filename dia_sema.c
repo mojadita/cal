@@ -1,7 +1,11 @@
-/* dia_sema.c -- rutinas para calcular el dia de la semana de una fecha dada.
+/* $Id: dia_sema.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+ * dia_sema.c -- rutinas para calcular el dia de la semana de una fecha dada.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: dia_sema.c,v $
+ * Revision 1.2  2000/07/17 00:27:52  luis
+ * arreglos de formateo.
+ *
  * Revision 1.1  1995/09/30 00:26:39  luis
  * Initial revision
  *
@@ -114,4 +118,4 @@ int dia_semana (dia, mes, anio)
              ) % 7;
 }
 
-/* fin de dia_sema.c */
+/*^$Id: dia_sema.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */

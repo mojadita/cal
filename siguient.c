@@ -1,8 +1,12 @@
-/* siguient.c -- rutina para calcular el día siguiente a uno dado de un
+/* $Id: siguient.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+ * siguient.c -- rutina para calcular el día siguiente a uno dado de un
  * mes determinado y un año determinado.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: siguient.c,v $
+ * Revision 1.2  2000/07/17 00:27:52  luis
+ * arreglos de formateo.
+ *
  * Revision 1.1  1995/09/30 00:28:59  luis
  * Initial revision
  *
@@ -57,4 +61,4 @@ int siguiente (dia, mes, anio)
          }
 }
 
-/* fin de siguient.c */
+/* $Id: siguient.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */

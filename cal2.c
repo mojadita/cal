@@ -1,7 +1,11 @@
-/* cal2.c -- Calendario en versión de colores.
+/* $Id: cal2.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+ * cal2.c -- Calendario en versión de colores.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: cal2.c,v $
+ * Revision 1.2  2000/07/17 00:27:52  luis
+ * arreglos de formateo.
+ *
  * Revision 1.1  1995/09/30 00:32:48  luis
  * Initial revision
  *
@@ -280,4 +284,4 @@ formato_corto (mes, anio)
         printf ("\033[0m\n");
 }
 
-/* fin de cal2.c */
+/* $Id: cal2.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */
