@@ -1,9 +1,13 @@
-/* $Id: siguient.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+/* $Id: siguient.c,v 1.3 2003/04/21 20:51:48 luis Exp $
  * siguient.c -- rutina para calcular el día siguiente a uno dado de un
  * mes determinado y un año determinado.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: siguient.c,v $
+ * Revision 1.3  2003/04/21 20:51:48  luis
+ * Añadido soporte internacional, para mostrar los mensajes y los meses y días
+ * de la semana en el idioma local configurado.
+ *
  * Revision 1.2  2000/07/17 00:27:52  luis
  * arreglos de formateo.
  *
@@ -11,13 +15,13 @@
  * Initial revision
  *
  *
- *        Descripcion:
+ *        Descripción:
  *        ============
-
- *        Esta funcion devuelve el valor del d!a siguiente al d!a especifi-
- *        cado. Esto se implementa con una funcion pues hay excepciones.
- *        As!, el d!a siguiente al 2 de septiembre de 1.752 no es el 3 sino
- *        el 14, debido a que se eliminaron 11 d!as para corregir el desfase
+ *
+ *        Esta función devuelve el valor del día siguiente al día especifi-
+ *        cado. Ésto se implementa con una función pues hay excepciones.
+ *        Así, el día siguiente al 2 de septiembre de 1.752 no es el 3, sino
+ *        el 14, debido a que se eliminaron 11 días para corregir el desfase
  *        introducido por el calendario anterior.
  *
  */
@@ -36,10 +40,10 @@
 #define       DIC       12
 
 
-int siguiente (dia, mes, anio)
+int siguiente (int dia, int mes, int anio)
 {
          if (anio < 1) return -1;
-         /* la excepcion */
+         /* la excepción */
          if (anio == 1752 && mes == 9 && dia == 2) return 14;
          switch (mes){
          case ENE: case MAR: case MAY: case JUL:
@@ -59,6 +63,6 @@ int siguiente (dia, mes, anio)
          default:
               return -1;
          }
-}
+} /* siguiente */
 
-/* $Id: siguient.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */
+/* $Id: siguient.c,v 1.3 2003/04/21 20:51:48 luis Exp $ */

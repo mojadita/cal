@@ -1,0 +1,82 @@
+# $Id: es_ES.po,v 1.1 2003/04/21 20:51:48 luis Exp $
+# Author: Luis.Colorado@HispaLinux.ES
+# Date: Mon Apr 21 22:17:27 MEST 2003
+# Copyright (C) 2003 Luis Colorado.
+#
+
+#: cal.c:71
+#, c-format
+msgid "%s: incorrect 2nd. parameter.\n"
+msgstr "%s: Segundo parámetro incorrecto.\n"
+
+#: cal.c:81
+#, c-format
+msgid "%s: incorrect 1st. parameter.\n"
+msgstr "%s: Primer parámetro incorrecto.\n"
+
+#: cal.c:91
+#, c-format
+msgid "%s: incorrect number of parameters.\n"
+msgstr "%s: Número incorrecto de parámetros.\n"
+
+# Añadidos para ajustar los datos leidos por tabla.
+# Meses.
+msgid "January"
+msgstr "Enero"
+
+msgid "February"
+msgstr "Febrero"
+
+msgid "March"
+msgstr "Marzo"
+
+msgid "April"
+msgstr "Abril"
+
+msgid "May"
+msgstr "Mayo"
+
+msgid "June"
+msgstr "Junio"
+
+msgid "July"
+msgstr "Julio"
+
+msgid "August"
+msgstr "Agosto"
+
+msgid "September"
+msgstr "Septiembre"
+
+msgid "October"
+msgstr "Octubre"
+
+msgid "November"
+msgstr "Noviembre"
+
+msgid "December"
+msgstr "Diciembre"
+
+# Días de la semana.
+msgid "Monday"
+msgstr "Lunes"
+
+msgid "Tuesday"
+msgstr "Martes"
+
+msgid "Wednesday"
+msgstr "Miércoles"
+
+msgid "Thursday"
+msgstr "Jueves"
+
+msgid "Friday"
+msgstr "Viernes"
+
+msgid "Saturday"
+msgstr "Sábado"
+
+msgid "Sunday"
+msgstr "Domingo"
+
+# $Id: es_ES.po,v 1.1 2003/04/21 20:51:48 luis Exp $

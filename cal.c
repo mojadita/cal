@@ -1,8 +1,12 @@
-/* $Id: cal.c,v 1.3 2000/07/17 00:27:52 luis Exp $
+/* $Id: cal.c,v 1.4 2003/04/21 20:51:48 luis Exp $
  * cal.c -- programa para imprimir un calendario.
  * Autor: Luis Colorado.
  * Fecha: 15.1.90.
  * $Log: cal.c,v $
+ * Revision 1.4  2003/04/21 20:51:48  luis
+ * Añadido soporte internacional, para mostrar los mensajes y los meses y días
+ * de la semana en el idioma local configurado.
+ *
  * Revision 1.3  2000/07/17 00:27:52  luis
  * arreglos de formateo.
  *
@@ -13,40 +17,41 @@
  * Initial revision
  *
  * 
- *     Descripcion:
+ *     Descripción:
  *     ============
  *
- *     Este programa imprime un calendario del mes o del a$o indicados.
- *     Si el mes contiene el d!a de la fecha actual, este se escribe entre
+ *     Este programa imprime un calendario del mes o del año indicados.
+ *     Si el mes contiene el día de la fecha actual, éste se escribe entre
  *     corchetes.
  *
  *     Uso:
  *     ====
  *
- *     cal [a$o | mes] [mes | a$o]
+ *     cal [año | mes] [mes | año]
  *
- *     El mes se reconoce por ser un numero de 1 a 12 (asi pues, no se
- *     podra representar un a$o anterior al a$o 13) y el a$o por ser un
- *     numero mayor que 12. Cuando no se especifica ningun parametro, se
- *     asume por defecto el calendario del mes actual del a$o actual. Si
+ *     El mes se reconoce por ser un número de 1 a 12 (así pues, no se
+ *     podrá representar un año anterior al año 13) y el año por ser un
+ *     número mayor que 12. Cuando no se especifica ningún parámetro, se
+ *     asume por defecto el calendario del mes actual del año actual. Si
  *     solo se especifica el mes, se entiende el calendario del mes indi-
- *     cado en el a$o actual. Si solo se especifica el a$o, se entiende
- *     un calendario completo del a$o indicado. Si se especifican los dos,
- *     se entendera un calendario del mes y a$o indicados, siempre y cuan-
- *     do uno sea mes y el otro a$o (en caso de que los dos sean meses o
- *     a$os, se considerar  solamente el ultimo indicado). El calendario
- *     muestra la fecha actual encerrandola entre corchetes cuando el
+ *     cado en el año actual. Si solo se especifica el año, se entiende
+ *     un calendario completo del año indicado. Si se especifican los dos,
+ *     se entenderá un calendario del mes y año indicados, siempre y cuan-
+ *     do uno sea mes y el otro año (en caso de que los dos sean meses o
+ *     años, se considerar  solamente el último indicado). El calendario
+ *     muestra la fecha actual encerrándola entre corchetes cuando el
  *     calendario es de un solo mes.
- *     El calendario tiene en cuenta la correccion realizada en 1752 para
- *     cambiar del calendario juliano (bisiestos cada cuatro a$os) al
- *     calendario gregoriano (bisiestos multiplos de 4 menos multiplos de
- *     100 menos multiplos de 400) de eliminar los dias 3 al 13 de septiembre
+ *     El calendario tiene en cuenta la corrección realizada en 1752 para
+ *     cambiar del calendario juliano (bisiestos cada cuatro años) al
+ *     calendario gregoriano (bisiestos múltiplos de 4 menos múltiplos de
+ *     100 menos múltiplos de 400) de eliminar los días 3 al 13 de septiembre
  *     de 1752. Probar "cal 1752" " "cal 9 1752".
  *
  */
 
 #include <stdio.h>
 #include <ctype.h>
+#include <libintl.h>
 #include <time.h>
 
 char *nomprog;
@@ -67,7 +72,7 @@ char *argv [];
         i = atoi (argv [2]);
         if (i <= 0) {
             fprintf (stderr,
-                	"%s: 2do. parametro incorrecto.",
+                	gettext("%s: incorrect 2nd. parameter.\n"),
                 	nomprog);
 		    exit (1);
         }
@@ -77,7 +82,7 @@ char *argv [];
         i = atoi (argv [1]);
         if (i <= 0){
             fprintf (stderr,
-                	"%s: 1er. parametro incorrecto.",
+                	gettext("%s: incorrect 1st. parameter.\n"),
                 	nomprog);
             exit (1);
         }
@@ -87,11 +92,12 @@ char *argv [];
         break;
     default:
         fprintf (stderr,
-                 "%s: numero incorrecto de parametros",
+                 gettext("%s: incorrect number of parameters.\n"),
                  nomprog);
         exit (1);
     }
     /* programa principal */
+	textdomain("cal");
     time (&hora);
 	fecha_hoy = *localtime (&hora);
     if (!mes && anio) formato_largo (anio);
@@ -104,10 +110,14 @@ char *argv [];
 
 /* cadenas correspondientes a los nombres de los meses */
 char *cad_meses [] =
-       {"Enero", "Febrero", "Marzo",
-        "Abril", "Mayo", "Junio",
-        "Julio", "Agosto", "Septiembre",
-        "Octubre", "Noviembre", "Diciembre"};
+       {"January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"};
+
+char *cad_dias [] = {
+	"Monday", "Tuesday", "Wednesday", "Thursday",
+	"Friday", "Saturday", "Sunday"};
 
 formato_largo (anio)
 {
@@ -135,12 +145,12 @@ formato_largo (anio)
         printf ("\n");
         for (j = 0; j < 3; j++) {
 	        int la, lb, lc;
-		    lb = strlen (cad_meses [mes [j]]);
+		    lb = strlen (gettext(cad_meses [mes [j]]));
 		    la = 10 - (lb >> 1);
 		    lc = 20 - la - lb;
 		    for (k = 0; k < la; k++)
 		    	printf (" ");
-		    printf ("%s", cad_meses [mes [j]]);
+		    printf ("%s", gettext(cad_meses [mes [j]]));
 		    if (j != 2) {
 			    for (k = 0; k < lc; k++)
 				    printf (" ");
@@ -150,7 +160,7 @@ formato_largo (anio)
         printf ("\n");
         for (j = 0; j < 3; j++) {
 	        int la, lb, lc;
-		    lb = strlen (cad_meses [mes [j]]);
+		    lb = strlen (gettext(cad_meses [mes [j]]));
 		    la = 10 - (lb >> 1);
 		    lc = 20 - la - lb;
 		    for (k = 0; k < la; k++)
@@ -164,9 +174,15 @@ formato_largo (anio)
 		    }
 	    }
 	    printf ("\n");
-        printf ("Lu Ma Mi Ju Vi Sa Do        "
-                "Lu Ma Mi Ju Vi Sa Do        "
-            	"Lu Ma Mi Ju Vi Sa Do\n");
+		for (j = 0; j < 3; j++) {
+			if (j) printf("        ");
+			for (k = 0; k < 7; k++) {
+				printf("%s%0.2s",
+					k ? " " : "",
+					gettext(cad_dias[k]));
+			} /* for (k) */
+		} /* for (j) */
+		printf("\n");
         printf ("====================        "
             	"====================        "
             	"====================\n");
@@ -198,8 +214,8 @@ formato_largo (anio)
             desfase [j] = dia_1_mes (mes [j] + 1, anio);
         }
     }
-    printf ("--------------------------------------------"
-            "--------------------------------\n");
+    printf ("--------------------------------------"
+			"--------------------------------------\n");
 } /* formato_largo */
 
 formato_corto (mes, anio)
@@ -209,7 +225,9 @@ formato_corto (mes, anio)
 	int la, lb, lc;
 	char cad_cab [100];
 
-	sprintf (cad_cab, "%s %04d", cad_meses [mes-1], anio);
+	sprintf (cad_cab,
+		"%s %04d",
+		gettext(cad_meses [mes-1]), anio);
 	lb = strlen (cad_cab);
 	la = 13 - (lb >> 1);
 	for (i = 0; i < la; i++) printf (" ");
@@ -217,7 +235,9 @@ formato_corto (mes, anio)
 	for (i = 0; i < la; i++) printf (" ");
 	for (i = 0; i < lb; i++) printf ("-");
 	printf ("\n");
-    printf ("Lun Mar Mie Jue Vie Sab Dom\n");
+	for (i = 0; i < 7; i++)
+		printf("%s%0.3s", i ? " " : "", gettext(cad_dias[i]));
+	printf("\n");
     printf ("===========================\n");
     dia = 1;
     desfase = dia_1_mes (mes, anio);
@@ -241,4 +261,4 @@ formato_corto (mes, anio)
     printf ("\n");
 } /* formato_corto */
 
-/* $Id: cal.c,v 1.3 2000/07/17 00:27:52 luis Exp $ */
+/* $Id: cal.c,v 1.4 2003/04/21 20:51:48 luis Exp $ */

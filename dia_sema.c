@@ -1,8 +1,12 @@
-/* $Id: dia_sema.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+/* $Id: dia_sema.c,v 1.3 2003/04/21 20:51:48 luis Exp $
  * dia_sema.c -- rutinas para calcular el dia de la semana de una fecha dada.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: dia_sema.c,v $
+ * Revision 1.3  2003/04/21 20:51:48  luis
+ * Añadido soporte internacional, para mostrar los mensajes y los meses y días
+ * de la semana en el idioma local configurado.
+ *
  * Revision 1.2  2000/07/17 00:27:52  luis
  * arreglos de formateo.
  *
@@ -13,15 +17,15 @@
  *        Descripcion:
  *        ============
  *
- *        Este fichero contiene la descripcion de tres subrutinas para el
- *        c lculo del d!a de la semana.
- *        dia_1_ene () calcula el dia de la semana del 1 de enero del a$o
- *        pasado como par metro.
- *        dia_1_mes () calcula el d!a de la semana de 1 del mes indicado como
- *        primer par metro y del a$o indicado como 2' par metro.
- *        dia_semana () calcula el d!a de la semana de una fecha indicada como
+ *        Este fichero contiene la descripción de tres subrutinas para el
+ *        cálculo del día de la semana.
+ *        dia_1_ene () calcula el día de la semana del 1 de enero del año
+ *        pasado como parámetro.
+ *        dia_1_mes () calcula el día de la semana de 1 del mes indicado como
+ *        primer parámetro y del año indicado como 2º parámetro.
+ *        dia_semana () calcula el día de la semana de una fecha indicada como
  *        tres enteros. Esta subrutina no se utiliza en el programa cal pero
- *        puede ser utilizada por otros programas como subrutina de librer!a.
+ *        puede ser utilizada por otros programas como subrutina de librería.
  *
  *        Uso:
  *        ====
@@ -38,20 +42,20 @@
  *        Valor devuelto:
  *        ===============
  *
- *        El valor devuelto se corresponde con el d!a de la semana de la fecha.
+ *        El valor devuelto se corresponde con el día de la semana de la fecha.
  *           -- El 0 corresponde al lunes.
  *           -- El 1 corresponde al martes.
- *           -- "  2      "      "  miercoles.
+ *           -- "  2      "      "  miércoles.
  *           -- "  3      "      "  jueves.
  *           -- "  4      "      "  viernes.
- *           -- "  5      "      "  s bado.
+ *           -- "  5      "      "  sábado.
  *           -- "  6      "      "  domingo.
  *
  *        Errores:
  *        ========
  *
  *        No se contemplan, es deber del usuario identificarlos y evitarlos.
- *        El introducir una fecha erronea, como el 35 de enero, produce resul-
+ *        El introducir una fecha errónea, como el 35 de enero, produce resul-
  *        tados, aunque es un error calcular esta fecha.
  *
  *        Ejemplo:
@@ -61,11 +65,11 @@
  *
  */
 
-int dia_1_ene (anio)
+int dia_1_ene (int anio)
 {
 
      if (anio <= 1752) {
-        int g_4; /* grupos de cuatro a$os */
+        int g_4; /* grupos de cuatro años */
 
         anio--;
         g_4 = anio / 4;
@@ -73,7 +77,7 @@ int dia_1_ene (anio)
         return (g_4 * 5 + anio + 5) % 7;
      }
      else {
-        int g_100, g_4; /* grupos de cien a$os y de 4 resp. */
+        int g_100, g_4; /* grupos de cien años y de 4 resp. */
 
         anio--;
         anio %= 400;
@@ -83,9 +87,9 @@ int dia_1_ene (anio)
         anio %= 4;
         return ((g_100 + g_4) * 5 + anio) % 7;
      }
-}
+} /* dia_1_ene */
 
-int dia_1_mes (mes, anio)
+int dia_1_mes (int mes, int anio)
 {
         static int dias_mes [12] [3] = {
          /* normal, bisiesto, 1752 */
@@ -108,14 +112,14 @@ int dia_1_mes (mes, anio)
         if (bisiesto (anio))
            return (dia_1_ene (anio) + dias_mes [mes][1]) % 7;
         return (dia_1_ene (anio) + dias_mes [mes][0]) % 7;
-}
+} /* dia_1_mes */
 
-int dia_semana (dia, mes, anio)
+int dia_semana (int dia, int mes, int anio)
 {
       return (dia_1_mes (mes, anio) +
               dia +
               (dia > 2 && mes == 9 && anio == 1752 ? 2 : -1)
              ) % 7;
-}
+} /* dia_semana */
 
-/*^$Id: dia_sema.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */
+/* $Id: dia_sema.c,v 1.3 2003/04/21 20:51:48 luis Exp $ */

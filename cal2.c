@@ -1,8 +1,12 @@
-/* $Id: cal2.c,v 1.2 2000/07/17 00:27:52 luis Exp $
+/* $Id: cal2.c,v 1.3 2003/04/21 20:51:48 luis Exp $
  * cal2.c -- Calendario en versión de colores.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: cal2.c,v $
+ * Revision 1.3  2003/04/21 20:51:48  luis
+ * Añadido soporte internacional, para mostrar los mensajes y los meses y días
+ * de la semana en el idioma local configurado.
+ *
  * Revision 1.2  2000/07/17 00:27:52  luis
  * arreglos de formateo.
  *
@@ -13,32 +17,32 @@
  *        Descripcion:
  *        ============
  *
- *        Este programa imprime un calendario del mes o del a$o indicados.
- *        Si el mes contiene el d!a de la fecha actual, ste se escribe entre
- *        corchetes. Su mec nica es como la del anterior, solo que imprime los
+ *        Este programa imprime un calendario del mes o del año indicados.
+ *        Si el mes contiene el día de la fecha actual, éste se escribe entre
+ *        corchetes. Su mecánica es como la del anterior, solo que imprime los
  *        datos en colores.
  *
  *        Uso:
  *        ====
  *
- *        cal [a$o | mes] [mes | a$o]
+ *        cal [año | mes] [mes | año]
  *
- *        El mes se reconoce por ser un n#mero de 1 a 12 (as! pues, no se
- *        podr  representar un a$o anterior al a$o 13) y el a$o por ser un
- *        n#mero mayor que 12. Cuando no se especifica ning#n par metro, se
- *        asume por defecto el calendario del mes actual del a$o actual. Si
+ *        El mes se reconoce por ser un número de 1 a 12 (así pues, no se
+ *        podrá representar un año anterior al año 13) y el año por ser un
+ *        número mayor que 12. Cuando no se especifica ningún parámetro, se
+ *        asume por defecto el calendario del mes actual del año actual. Si
  *        solo se especifica el mes, se entiende el calendario del mes indi-
- *        cado en el a$o actual. Si solo se especifica el a$o, se entiende
- *        un calendario completo del a$o indicado. Si se especifican los dos,
- *        se entender  un calendario del mes y a$o indicados, siempre y cuan-
- *        do uno sea mes y el otro a$o (en caso de que los dos sean meses o
- *        a$os, se considerar  solamente el #ltimo indicado). El calendario
- *        muestra la fecha actual encerr ndola entre corchetes cuando el
+ *        cado en el año actual. Si solo se especifica el año, se entiende
+ *        un calendario completo del año indicado. Si se especifican los dos,
+ *        se entenderá un calendario del mes y año indicados, siempre y cuan-
+ *        do uno sea mes y el otro año (en caso de que los dos sean meses o
+ *        años, se considerará solamente el último indicado). El calendario
+ *        muestra la fecha actual encerrándola entre corchetes cuando el
  *        calendario es de un solo mes.
- *        El calendario tiene en cuenta la correccion realizada en 1752 para
- *        cambiar del calendario juliano (bisiestos cada cuatro a$os) al
- *        calendario gregoriano (bisiestos m#ltiplos de 4 menos m#ltiplos de
- *        100 menos m#ltiplos de 400) de eliminar los d!as 3 al 13 de septiembre
+ *        El calendario tiene en cuenta la corrección realizada en 1752 para
+ *        cambiar del calendario juliano (bisiestos cada cuatro años) al
+ *        calendario gregoriano (bisiestos múltiplos de 4 menos múltiplos de
+ *        100 menos múltiplos de 400) de eliminar los días 3 al 13 de septiembre
  *        de 1752. Probar "cal 1752" o "cal 9 1752".
  *
  *        Ejemplos:
@@ -46,7 +50,7 @@
  *        C>CAL
  *                 Sep 1989
  *                 --------
- *        Lun Mar Mi Jue Vie S b Dom
+ *        Lun Mar Mié Jue Vie Sáb Dom
  *        ===========================
  *                          1   2   3
  *          4 [ 5]  6   7   8   9  10    <== la fecha actual.
@@ -56,8 +60,8 @@
  *
  *        C>CAL 12
  *                  Dic 1989             <== el mes de diciembre
- *                  --------                 del a$o en curso.
- *        Lun Mar Mi Jue Vie S b Dom
+ *                  --------                 del año en curso.
+ *        Lun Mar Mie Jue Vie Sáb Dom
  *        ===========================
  *                          1   2   3
  *          4   5   6   7   8   9  10
@@ -68,8 +72,8 @@
  *        C>CAL 3 1610
  *
  *                 Mar  1610             <== se han indicado los dos
- *                 ---------                 par metros.
- *        Lun Mar Mi Jue Vie S b Dom
+ *                 ---------                 parámetros.
+ *        Lun Mar Mié Jue Vie Sáb Dom
  *        ===========================
  *          1   2   3   4   5   6   7
  *          8   9  10  11  12  13  14
@@ -80,13 +84,13 @@
  *         C>CAL 9 1752
  *                  Sep  1752
  *                  ---------
- *         Lun Mar Mi Jue Vie S b Dom
+ *         Lun Mar Mié Jue Vie Sáb Dom
  *         ===========================
- *               1   2  14  15  16  17   <== correccion de 1752.
+ *               1   2  14  15  16  17   <== corrección de 1752.
  *          18  19  20  21  22  23  24
  *          25  26  27  28  29  30
  *
- *         C>CAL 1989                    <== solo se indica el a$o.
+ *         C>CAL 1989                    <== solo se indica el año.
  *
  *
  *                                         1989
@@ -94,7 +98,7 @@
  *
  *                  Ene                    Feb                    Mar
  *                  ---                    ---                    ---
- *         Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do
+ *         Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do
  *         ====================   ====================   ====================
  *                            1          1  2  3  4  5          1  2  3  4  5
  *          2  3  4  5  6  7  8    6  7  8  9 10 11 12    6  7  8  9 10 11 12
@@ -105,7 +109,7 @@
  *
  *                  Abr                    May                    Jun
  *                  ---                    ---                    ---
- *         Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do
+ *         Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do
  *         ====================   ====================   ====================
  *                         1  2    1  2  3  4  5  6  7             1  2  3  4
  *          3  4  5  6  7  8  9    8  9 10 11 12 13 14    5  6  7  8  9 10 11
@@ -116,7 +120,7 @@
  *
  *                  Jul                    Ago                    Sep
  *                  ---                    ---                    ---
- *         Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do
+ *         Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do
  *         ====================   ====================   ====================
  *                         1  2       1  2  3  4  5  6                1  2  3
  *          3  4  5  6  7  8  9    7  8  9 10 11 12 13    4  5  6  7  8  9 10
@@ -127,7 +131,7 @@
  *
  *                  Oct                    Nov                    Dic
  *                  ---                    ---                    ---
- *         Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do   Lu Ma Mi Ju Vi S  Do
+ *         Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do   Lu Ma Mi Ju Vi Sá Do
  *         ====================   ====================   ====================
  *                            1          1  2  3  4  5                1  2  3
  *          2  3  4  5  6  7  8    6  7  8  9 10 11 12    4  5  6  7  8  9 10
@@ -160,7 +164,9 @@ char *argv [];
         case 3:
              i = atoi (argv [2]);
              if (i <= 0) {
-                fprintf (stderr, "%s: 2do. parametro incorrecto.", nomprog);
+                fprintf (stderr,
+					gettext("%s: 2do. parametro incorrecto."),
+					nomprog);
                 exit (1);
              }
              if (i > 12) anio = i;
@@ -168,7 +174,9 @@ char *argv [];
         case 2:
              i = atoi (argv [1]);
              if (i <= 0){
-                fprintf (stderr, "%s: 1er. parametro incorrecto.", nomprog);
+                fprintf (stderr,
+					gettext("%s: 1er. parametro incorrecto."),
+					nomprog);
                 exit (1);
              }
              if (i > 12) anio = i;
@@ -177,7 +185,7 @@ char *argv [];
              break;
         default:
              fprintf (stderr,
-                      "%s: numero incorrecto de parametros",
+                      gettext("%s: numero incorrecto de parametros"),
                       nomprog);
              exit (1);
         }
@@ -220,7 +228,8 @@ formato_largo (anio)
                     cad_meses [mes [1]],
                     cad_meses [mes [2]]);
             printf ("\033[1;32m         ---                         ---                         ---\n");
-            printf ("\033[1;37mLu Ma Mi Ju Vi Sa Do        Lu Ma Mi Ju Vi Sa Do        Lu Ma Mi Ju Vi Sa Do\n");
+            printf ("\033[1;37m%s\n",
+				gettext("Lu Ma Mi Ju Vi Sa Do        Lu Ma Mi Ju Vi Sa Do        Lu Ma Mi Ju Vi Sa Do"));
             printf ("\033[1;31m====================        ====================        ====================\n");
             printf ("\033[0;36m");
             for (j = 0; j < 6; j++){  /* fila */
@@ -257,9 +266,9 @@ formato_corto (mes, anio)
 
         int dia, desfase, i, j;
 
-        printf ("\033[1;33m         %s  %04d\n", cad_meses [mes-1], anio);
+        printf ("\033[1;33m         %s  %04d\n", gettext(cad_meses [mes-1]), anio);
         printf ("\033[1;32m         ---------\n");
-        printf ("\033[1;37mLun Mar Mie Jue Vie Sab Dom\n");
+        printf ("\033[1;37m%s\n", gettext("Lun Mar Mie Jue Vie Sab Dom"));
         printf ("\033[1;31m===========================\n");
         printf ("\033[1;36m");
         dia = 1;
@@ -284,4 +293,4 @@ formato_corto (mes, anio)
         printf ("\033[0m\n");
 }
 
-/* $Id: cal2.c,v 1.2 2000/07/17 00:27:52 luis Exp $ */
+/* $Id: cal2.c,v 1.3 2003/04/21 20:51:48 luis Exp $ */
