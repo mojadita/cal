@@ -1,8 +1,11 @@
-/* $Id: cal.c,v 1.6 2004/10/12 19:38:50 luis Exp $
+/* $Id: cal.c,v 1.7 2004/12/04 21:37:07 luis Exp $
  * cal.c -- programa para imprimir un calendario.
  * Autor: Luis Colorado.
  * Fecha: 15.1.90.
  * $Log: cal.c,v $
+ * Revision 1.7  2004/12/04 21:37:07  luis
+ * Added support for automake, autoconfig, etc.
+ *
  * Revision 1.6  2004/10/12 19:38:50  luis
  * Modificado el estilo del programa.
  *
@@ -57,6 +60,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <getopt.h>
 #include <libintl.h>
 #include <time.h>
 
@@ -71,8 +75,19 @@ char *argv [];
     int mes = 0;
     int anio = 0;
     int i;
+	extern int optind;
+	extern char *optarg;
+	int opt;
 
     nomprog = argv [0];
+
+	while((opt=getopt(argc, argv, "V")) != EOF) {
+		switch(opt) {
+		case 'V':
+			printf("%s "PACKAGE" "VERSION"\n", nomprog);
+			exit(0);
+		} /* switch */
+	} /* while */
     switch (argc) {
     case 3:
         i = atoi (argv [2]);
@@ -291,4 +306,4 @@ formato_corto (mes, anio)
     printf ("\n");
 } /* formato_corto */
 
-/* $Id: cal.c,v 1.6 2004/10/12 19:38:50 luis Exp $ */
+/* $Id: cal.c,v 1.7 2004/12/04 21:37:07 luis Exp $ */
