@@ -20,7 +20,7 @@ uno sea mes y el otro año (en caso de que los dos sean meses o
 años, se considerará solamente el último indicado). El calendario
 muestra la fecha actual encerrándola entre corchetes cuando el
 calendario es de un solo mes.
-El calendario tiene en cuenta la corrección realizada en 1752 para
+El calendario tiene en cuenta la corrección realizada en 1.752 para
 cambiar de calendario juliano (bisiestos cada cuatro años) a
 calendario gregoriano (bisiestos múltiplos de 4 menos multiplos de
 100 menos múltiplos de 400) de eliminar los dias 3 al 13 de septiembre
@@ -28,4 +28,5 @@ de 1752. Probar "cal 1752" ó "cal 9 1752".
 
 .SH AUTOR
 Este programa ha sido desarrollado por
-Luis Colorado <luis.colorado@slug.ctv.es> el 15 de enero de 1.990
+Luis Colorado <Luis.Colorado@HispaLinux.ES>
+el 15 de enero de 1.990

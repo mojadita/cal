@@ -1,8 +1,11 @@
-/* $Id: cal.c,v 1.5 2003/04/21 22:21:06 luis Exp $
+/* $Id: cal.c,v 1.6 2004/10/12 19:38:50 luis Exp $
  * cal.c -- programa para imprimir un calendario.
  * Autor: Luis Colorado.
  * Fecha: 15.1.90.
  * $Log: cal.c,v $
+ * Revision 1.6  2004/10/12 19:38:50  luis
+ * Modificado el estilo del programa.
+ *
  * Revision 1.5  2003/04/21 22:21:06  luis
  * *** empty log message ***
  *
@@ -79,9 +82,11 @@ char *argv [];
                 	nomprog);
 			puts("");
 		    exit (1);
-        }
-        if (i > 12) anio = i;
-        else mes = i;
+        } /* if */
+        if (i > 12)
+				anio = i;
+        else
+				mes = i;
     case 2:
         i = atoi (argv [1]);
         if (i <= 0){
@@ -90,9 +95,11 @@ char *argv [];
                 	nomprog);
 			puts("");
             exit (1);
-        }
-        if (i > 12) anio = i;
-             else mes = i;
+        } /* if */
+        if (i > 12)
+				anio = i;
+        else
+				mes = i;
     case 1: /* sin parametros */
         break;
     default:
@@ -101,17 +108,21 @@ char *argv [];
                  nomprog);
 		puts("");
         exit (1);
-    }
+    } /* switch */
+
     /* programa principal */
 	textdomain("cal");
     time (&hora);
 	fecha_hoy = *localtime (&hora);
-    if (!mes && anio) formato_largo (anio);
-    else {
-	    if (!mes) mes = fecha_hoy.tm_mon + 1;
-        if (!anio) anio = fecha_hoy.tm_year + 1900;
+    if (!mes && anio) {
+			formato_largo (anio);
+	} else {
+	    if (!mes)
+				mes = fecha_hoy.tm_mon + 1;
+        if (!anio)
+				anio = fecha_hoy.tm_year + 1900;
         formato_corto (mes, anio);
-    }
+    } /* if */
 } /* main */
 
 /* cadenas correspondientes a los nombres de los meses */
@@ -132,15 +143,21 @@ formato_largo (anio)
 
 	sprintf (cad, "%d", anio);
     printf ("\n\n");
+
 	for (i = 0; i < 38 - strlen (cad) / 2; i++)
 		printf (" ");
+
 	printf ("%s\n", cad);
+
 	for (i = 0; i < 38 - strlen (cad) / 2; i++)
 		printf (" ");
+
 	for (i = 0; i < strlen (cad); i++)
 		printf ("=");
+
     printf ("\n----------------------------------"
         	"------------------------------------------\n");
+
     for (i = 0; i < 3; i++) {
         mes [i] = i;
         dia [i] = 1;
@@ -151,21 +168,26 @@ formato_largo (anio)
         printf ("\n");
         for (j = 0; j < 3; j++) {
 	        int la, lb, lc;
+
 		    lb = strlen (gettext(cad_meses [mes [j]]));
 		    la = 10 - (lb >> 1);
 		    lc = 20 - la - lb;
-		    for (k = 0; k < la; k++)
+		    for (k = 0; k < la; k++) {
 		    	printf (" ");
+			} /* for */
 		    printf ("%s", gettext(cad_meses [mes [j]]));
 		    if (j != 2) {
-			    for (k = 0; k < lc; k++)
+			    for (k = 0; k < lc; k++) {
 				    printf (" ");
+				} /* for */
 			    printf ("        ");
-		    }
-	    }
+		    } /* if */
+	    } /* for */
         printf ("\n");
+
         for (j = 0; j < 3; j++) {
 	        int la, lb, lc;
+
 		    lb = strlen (gettext(cad_meses [mes [j]]));
 		    la = 10 - (lb >> 1);
 		    lc = 20 - la - lb;
@@ -177,8 +199,8 @@ formato_largo (anio)
 			    for (k = 0; k < lc; k++)
 				    printf (" ");
 			    printf ("        ");
-		    }
-	    }
+		    } /* for */
+	    } /* for */
 	    printf ("\n");
 		for (j = 0; j < 3; j++) {
 			if (j) printf("        ");
@@ -186,8 +208,8 @@ formato_largo (anio)
 				printf("%s%0.2s",
 					k ? " " : "",
 					gettext(cad_dias[k]));
-			} /* for (k) */
-		} /* for (j) */
+			} /* for */
+		} /* for */
 		printf("\n");
         printf ("====================        "
             	"====================        "
@@ -198,28 +220,28 @@ formato_largo (anio)
                     if (desfase [k]) {
                         desfase [k]--;
                         printf ("   ");
-                    }
-                    else {
-                        if (dia [k] == -1)
+                    } else {
+                        if (dia [k] == -1) {
                             printf ("   ");
-                        else {
+						} else {
                             printf ("%2d ", dia [k]);
                                     dia [k] = siguiente (dia [k],
                               	    mes [k] + 1,
                               	    anio);
-                        }
-                    }
-                }
-                if (k != 2) printf ("       ");
-            }
+                        } /* if */
+                    } /* if */
+                } /* for */
+                if (k != 2)
+						printf ("       ");
+            } /* for */
             printf ("\n");
-        }
+        } /* for */
         for (j = 0; j < 3; j ++) {
             mes [j] += 3;
             dia [j] = 1;
             desfase [j] = dia_1_mes (mes [j] + 1, anio);
-        }
-    }
+        } /* for */
+    } /* for */
     printf ("--------------------------------------"
 			"--------------------------------------\n");
 } /* formato_largo */
@@ -249,22 +271,24 @@ formato_corto (mes, anio)
     desfase = dia_1_mes (mes, anio);
     for (i = 0;;i++) {
         int resaltado;
+
         if (desfase) {
             printf ("    ");
             desfase--;
-        }
-        else {
+        } else {
             resaltado = (anio == fecha_hoy.tm_year + 1900 &&
                           dia == fecha_hoy.tm_mday &&
                           mes == fecha_hoy.tm_mon + 1);
-            if (resaltado) printf ("[%2d]", dia);
-            else printf (" %2d ", dia);
+            if (resaltado)
+					printf ("[%2d]", dia);
+            else
+					printf (" %2d ", dia);
             dia = siguiente (dia, mes, anio);
-        }
+        } /* if */
         if (dia == -1) break;
         if (i % 7 == 6) printf ("\n");
-    }
+    } /* for */
     printf ("\n");
 } /* formato_corto */
 
-/* $Id: cal.c,v 1.5 2003/04/21 22:21:06 luis Exp $ */
+/* $Id: cal.c,v 1.6 2004/10/12 19:38:50 luis Exp $ */

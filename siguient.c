@@ -1,9 +1,12 @@
-/* $Id: siguient.c,v 1.3 2003/04/21 20:51:48 luis Exp $
+/* $Id: siguient.c,v 1.4 2004/10/12 19:38:50 luis Exp $
  * siguient.c -- rutina para calcular el día siguiente a uno dado de un
  * mes determinado y un año determinado.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: siguient.c,v $
+ * Revision 1.4  2004/10/12 19:38:50  luis
+ * Modificado el estilo del programa.
+ *
  * Revision 1.3  2003/04/21 20:51:48  luis
  * Añadido soporte internacional, para mostrar los mensajes y los meses y días
  * de la semana en el idioma local configurado.
@@ -42,27 +45,35 @@
 
 int siguiente (int dia, int mes, int anio)
 {
-         if (anio < 1) return -1;
+         if (anio < 1)
+				 return -1;
+
          /* la excepción */
-         if (anio == 1752 && mes == 9 && dia == 2) return 14;
+         if (anio == 1752 && mes == 9 && dia == 2)
+				 return 14;
+
          switch (mes){
          case ENE: case MAR: case MAY: case JUL:
          case AGO: case OCT: case DIC:
-              if (dia < 1 || dia >= 31) return -1;
+              if (dia < 1 || dia >= 31)
+					  return -1;
               return ++dia;
          case ABR: case JUN: case SEP: case NOV:
-              if (dia < 1 || dia >= 30) return -1;
+              if (dia < 1 || dia >= 30)
+					  return -1;
               return ++dia;
          case FEB:
               if (bisiesto (anio)){
-                 if (dia < 1 || dia >= 29) return -1;
-              }
+                 if (dia < 1 || dia >= 29)
+						 return -1;
+              } /* if */
               else
-                 if (dia < 1 || dia >= 28) return -1;
+                 if (dia < 1 || dia >= 28)
+						 return -1;
               return ++dia;
          default:
               return -1;
-         }
+         } /* switch */
 } /* siguiente */
 
-/* $Id: siguient.c,v 1.3 2003/04/21 20:51:48 luis Exp $ */
+/* $Id: siguient.c,v 1.4 2004/10/12 19:38:50 luis Exp $ */

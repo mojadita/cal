@@ -1,8 +1,11 @@
-/* $Id: bisiesto.c,v 1.3 2003/04/21 20:51:48 luis Exp $
+/* $Id: bisiesto.c,v 1.4 2004/10/12 19:38:50 luis Exp $
  * bisiesto.c -- rutina para comprobar si un año es bisiesto.
  * Autor: Luis Colorado.
  * Fecha: 15/1/90.
  * $Log: bisiesto.c,v $
+ * Revision 1.4  2004/10/12 19:38:50  luis
+ * Modificado el estilo del programa.
+ *
  * Revision 1.3  2003/04/21 20:51:48  luis
  * Añadido soporte internacional, para mostrar los mensajes y los meses y días
  * de la semana en el idioma local configurado.
@@ -59,10 +62,14 @@
 
 int bisiesto (anio)
 {
-     if (anio < 1752) return (anio % 4 == 0);
+     if (anio < 1752) {
+		if (anio % 4 == 0) return BISIESTO;
+		return NORMAL;
+	 } /* if */
      if (anio % 400 == 0) return BISIESTO;
      if (anio % 100 == 0) return NORMAL;
-     return (anio % 4 == 0);
+     if (anio % 4 == 0) return BISESTO;
+	 return NORMAL;
 } /* bisiesto */
 
-/* $Id: bisiesto.c,v 1.3 2003/04/21 20:51:48 luis Exp $ */
+/* $Id: bisiesto.c,v 1.4 2004/10/12 19:38:50 luis Exp $ */
