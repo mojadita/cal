@@ -46,13 +46,13 @@
  *        ===============
  *
  *        El valor devuelto se corresponde con el día de la semana de la fecha.
- *           -- El 0 corresponde al lunes.
- *           -- El 1 corresponde al martes.
- *           -- "  2      "      "  miércoles.
- *           -- "  3      "      "  jueves.
- *           -- "  4      "      "  viernes.
- *           -- "  5      "      "  sábado.
- *           -- "  6      "      "  domingo.
+ *           -- El 1 corresponde al lunes.
+ *           -- El 2 corresponde al martes.
+ *           -- "  3      "      "  miércoles.
+ *           -- "  4      "      "  jueves.
+ *           -- "  5      "      "  viernes.
+ *           -- "  6      "      "  sábado.
+ *           -- "  0      "      "  domingo.
  *
  *        Errores:
  *        ========
@@ -71,13 +71,15 @@
 int dia_1_ene (int anio)
 {
 
+    int res;
+
      if (anio <= 1752) {
         int g_4; /* grupos de cuatro años */
 
         anio--;
         g_4 = anio / 4;
         anio %= 4;
-        return (g_4 * 5 + anio + 5) % 7;
+        res = (g_4 * 5 + anio + 6) % 7;
      } else {
         int g_100, g_4; /* grupos de cien años y de 4 resp. */
 
@@ -87,8 +89,9 @@ int dia_1_ene (int anio)
         anio %= 100;
         g_4 = anio / 4;
         anio %= 4;
-        return ((g_100 + g_4) * 5 + anio) % 7;
+        res = ((g_100 + g_4) * 5 + anio + 1) % 7;
      } /* if */
+     return res;
 } /* dia_1_ene */
 
 int dia_1_mes (int mes, int anio)
@@ -120,7 +123,7 @@ int dia_semana (int dia, int mes, int anio)
 {
       return (dia_1_mes (mes, anio) +
               dia +
-              (dia > 2 && mes == 9 && anio == 1752 ? 2 : -1)
+              (dia > 2 && mes == 9 && anio == 1752 ? 2 : 6)
              ) % 7;
 } /* dia_semana */
 

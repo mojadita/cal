@@ -1,79 +1,142 @@
-# $Id: en_US.po,v 1.2 2003/04/21 22:21:06 luis Exp $
-# Author: Luis Colorado <luis.colorado@hispalinux.es>
-# Date: Mon Apr 21 23:40:26 MEST 2003
-# Copyright (C) 2003 Luis Colorado.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CAL 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-14 17:35+0300\n"
+"PO-Revision-Date: 2015-06-14 17:41+0300\n"
+"Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: cal.c:75
-#, c-format
-msgid "%s: incorrect 2nd. parameter."
-msgstr "%s: incorrect 2nd. parameter."
-
-#: cal.c:86
-#, c-format
-msgid "%s: incorrect 1st. parameter."
-msgstr "%s: incorrect 1st. parameter."
-
-#: cal.c:97
-#, c-format
-msgid "%s: incorrect number of parameters."
-msgstr "%s: incorrect number of parameters."
-
-# Month and day strings.
-msgid "Monday"
-msgstr "Monday"
-
-msgid "Tuesday"
-msgstr "Tuesday"
-
-msgid "Wednesday"
-msgstr "Wednesday"
-
-msgid "Thursday"
-msgstr "Thursday"
-
-msgid "Friday"
-msgstr "Friday"
-
-msgid "Saturday"
-msgstr "Saturday"
-
-msgid "Sunday"
-msgstr "Sunday"
-
-msgid "January"
+#: cal.c:30
+msgid "january"
 msgstr "January"
 
-msgid "February"
+#: cal.c:30
+msgid "february"
 msgstr "February"
 
-msgid "March"
+#: cal.c:30
+msgid "march"
 msgstr "March"
 
-msgid "April"
+#: cal.c:31
+msgid "april"
 msgstr "April"
 
-msgid "May"
+#: cal.c:31
+msgid "may"
 msgstr "May"
 
-msgid "June"
+#: cal.c:31
+msgid "june"
 msgstr "June"
 
-msgid "July"
+#: cal.c:32
+msgid "july"
 msgstr "July"
 
-msgid "August"
+#: cal.c:32
+msgid "august"
 msgstr "August"
 
-msgid "September"
+#: cal.c:32
+msgid "september"
 msgstr "September"
 
-msgid "October"
+#: cal.c:33
+msgid "october"
 msgstr "October"
 
-msgid "November"
+#: cal.c:33
+msgid "november"
 msgstr "November"
 
-msgid "December"
+#: cal.c:33
+msgid "december"
 msgstr "December"
 
+#: cal.c:37
+msgid "sun"
+msgstr "Sun"
+
+#: cal.c:37
+msgid "mon"
+msgstr "Mon"
+
+#: cal.c:37
+msgid "tue"
+msgstr "Tue"
+
+#: cal.c:37
+msgid "wed"
+msgstr "Wed"
+
+#: cal.c:38
+msgid "thu"
+msgstr "Thu"
+
+#: cal.c:38
+msgid "fri"
+msgstr "Fri"
+
+#: cal.c:38
+msgid "sat"
+msgstr "Sat"
+
+#: cal.c:42 cal.c:43
+msgid "su"
+msgstr "Su"
+
+#: cal.c:42
+msgid "mo"
+msgstr "Mo"
+
+#: cal.c:42
+msgid "tu"
+msgstr "Tu"
+
+#: cal.c:42
+msgid "we"
+msgstr "We"
+
+#: cal.c:43
+msgid "th"
+msgstr "Th"
+
+#: cal.c:43
+msgid "fr"
+msgstr "Fr"
+
+#: cal.c:43
+msgid "sa"
+msgstr "Sa"
+
+#: cal.c:85
+msgid "package"
+msgstr "Package"
+
+#: cal.c:85
+msgid "version"
+msgstr "Version"
+
+#: cal.c:103
+msgid "incorrect number of parameters"
+msgstr "Invalid number of parameters."
+
+#: cal.c:112
+msgid "incorrect second parameter"
+msgstr "Invalid second parameter."
+
+#: cal.c:124
+msgid "incorrect first parameter"
+msgstr "Invalid first parameter."

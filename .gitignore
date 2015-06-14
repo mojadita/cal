@@ -1,0 +1,7 @@
+.deps/
+CVS/
+ansical
+*.o
+cal
+*.mo
+*~

@@ -45,35 +45,35 @@
 
 int siguiente (int dia, int mes, int anio)
 {
-         if (anio < 1)
-				 return -1;
+    if (anio < 1)
+        return -1;
 
-         /* la excepción */
-         if (anio == 1752 && mes == 9 && dia == 2)
-				 return 14;
+    /* la excepción */
+    if (anio == 1752 && mes == 9 && dia == 2)
+            return 14;
 
-         switch (mes){
-         case ENE: case MAR: case MAY: case JUL:
-         case AGO: case OCT: case DIC:
-              if (dia < 1 || dia >= 31)
-					  return -1;
-              return ++dia;
-         case ABR: case JUN: case SEP: case NOV:
-              if (dia < 1 || dia >= 30)
-					  return -1;
-              return ++dia;
-         case FEB:
-              if (bisiesto (anio)){
-                 if (dia < 1 || dia >= 29)
-						 return -1;
-              } /* if */
-              else
-                 if (dia < 1 || dia >= 28)
-						 return -1;
-              return ++dia;
-         default:
-              return -1;
-         } /* switch */
+    switch (mes){
+    case ENE: case MAR: case MAY: case JUL:
+    case AGO: case OCT: case DIC:
+         if (dia < 1 || dia >= 31)
+                 return -1;
+         return ++dia;
+    case ABR: case JUN: case SEP: case NOV:
+         if (dia < 1 || dia >= 30)
+                 return -1;
+         return ++dia;
+    case FEB:
+         if (bisiesto (anio)){
+            if (dia < 1 || dia >= 29)
+                    return -1;
+         } /* if */
+         else
+            if (dia < 1 || dia >= 28)
+                    return -1;
+         return ++dia;
+    default:
+         return -1;
+    } /* switch */
 } /* siguiente */
 
 /* $Id: siguient.c,v 1.4 2004/10/12 19:38:50 luis Exp $ */
