@@ -99,20 +99,20 @@ int dia_1_ene (int anio)
 
 int dia_1_mes (int mes, int anio)
 {
-        static int dias_mes [12] [3] = {
+        static int dias_mes[12][3] = {
          /* normal, bisiesto, 1752 */
-            0,      0,        0, /* ENERO */
-            3,      3,        3, /* FEBRERO */
-            3,      4,        4, /* MARZO */
-            6,      0,        0, /* ABRIL */
-            1,      2,        2, /* MAYO */
-            4,      5,        5, /* JUNIO */
-            6,      0,        0, /* JULIO */
-            2,      3,        3, /* AGOSTO */
-            5,      6,        6, /* SEPTIEMBRE */
-            0,      1,        4, /* OCTUBRE */
-            3,      4,        0, /* NOVIEMBRE */
-            5,      6,        2  /* DICIEMBRE */
+            {0,      0,        0,}, /* ENERO */
+            {3,      3,        3,}, /* FEBRERO */
+            {3,      4,        4,}, /* MARZO */
+            {6,      0,        0,}, /* ABRIL */
+            {1,      2,        2,}, /* MAYO */
+            {4,      5,        5,}, /* JUNIO */
+            {6,      0,        0,}, /* JULIO */
+            {2,      3,        3,}, /* AGOSTO */
+            {5,      6,        6,}, /* SEPTIEMBRE */
+            {0,      1,        4,}, /* OCTUBRE */
+            {3,      4,        0,}, /* NOVIEMBRE */
+            {5,      6,        2,}, /* DICIEMBRE */
         };
         mes--;
         if (anio == 1752)

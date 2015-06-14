@@ -204,30 +204,30 @@ void formato_largo(int anio)
                "====================\n");
         for (j = 0; j < 6; j++){  /* fila */
             for (k = 0; k < 3; k++) {  /* mes */
+                if (k) printf("        ");
                 for (l = 0; l < 7; l++) { /* columna */
+                    if (l) printf(" ");
                     if (desfase[k]) {
                         desfase[k]--;
-                        printf("   ");
+                        printf("  ");
                     } else {
                         if (dia [k] == -1) {
-                            printf("   ");
+                            printf("  ");
 						} else {
-                            printf("%2d ", dia [k]);
-                                    dia [k] = siguiente(dia [k],
-                              	    mes [k] + 1,
-                              	    anio);
+                            printf("%2d",
+                                    dia [k]);
+                            dia[k] = siguiente(
+                                    dia[k], mes[k] + 1, anio);
                         } /* if */
                     } /* if */
                 } /* for */
-                if (k != 2)
-						printf("       ");
             } /* for */
             printf("\n");
         } /* for */
         for (j = 0; j < 3; j ++) {
             mes[j] += 3;
             dia[j] = 1;
-            desfase [j] = (dia_1_mes(mes [j] + 1, anio) - fdow + 7)%7;
+            desfase[j] = (dia_1_mes(mes[j] + 1, anio) - fdow + 7)%7;
         } /* for */
     } /* for */
     printf("--------------------------------------"
