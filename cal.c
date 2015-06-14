@@ -1,4 +1,4 @@
-/* $Id: cal.c,v 1.9 2015/06/14 21:44:37 luis Exp $
+/* $Id: cal.c,v 1.10 2015/06/14 21:50:28 luis Exp $
  * cal.c -- programa para imprimir un calendario.
  * Autor: Luis Colorado.
  * Fecha: 15.1.90.
@@ -40,7 +40,7 @@ char *cad_dias3[] = {
 
 char *cad_dias2[] = {
     _("su"), _("mo"), _("tu"), _("we"),
-    _("th"), _("fr"), _("sa"), _("su"),
+    _("th"), _("fr"), _("sa"),
 };
 
 void formato_largo(int y);
@@ -278,4 +278,4 @@ void formato_corto(int mes, int anio)
     printf("\n");
 } /* formato_corto */
 
-/* $Id: cal.c,v 1.9 2015/06/14 21:44:37 luis Exp $ */
+/* $Id: cal.c,v 1.10 2015/06/14 21:50:28 luis Exp $ */
