@@ -14,129 +14,129 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: cal.c:30
 msgid "january"
-msgstr "Enero"
+msgstr "enero"
 
 #: cal.c:30
 msgid "february"
-msgstr "Febrero"
+msgstr "febrero"
 
 #: cal.c:30
 msgid "march"
-msgstr "Marzo"
+msgstr "marzo"
 
 #: cal.c:31
 msgid "april"
-msgstr "Abril"
+msgstr "abril"
 
 #: cal.c:31
 msgid "may"
-msgstr "Mayo"
+msgstr "mayo"
 
 #: cal.c:31
 msgid "june"
-msgstr "Junio"
+msgstr "junio"
 
 #: cal.c:32
 msgid "july"
-msgstr "Julio"
+msgstr "julio"
 
 #: cal.c:32
 msgid "august"
-msgstr "Agosto"
+msgstr "agosto"
 
 #: cal.c:32
 msgid "september"
-msgstr "Septiembre"
+msgstr "septiembre"
 
 #: cal.c:33
 msgid "october"
-msgstr "Octubre"
+msgstr "octubre"
 
 #: cal.c:33
 msgid "november"
-msgstr "Noviembre"
+msgstr "noviembre"
 
 #: cal.c:33
 msgid "december"
-msgstr "Diciembre"
+msgstr "diciembre"
 
 #: cal.c:37
 msgid "sun"
-msgstr "Dom"
+msgstr "dom"
 
 #: cal.c:37
 msgid "mon"
-msgstr "Lun"
+msgstr "lun"
 
 #: cal.c:37
 msgid "tue"
-msgstr "Mar"
+msgstr "mar"
 
 #: cal.c:37
 msgid "wed"
-msgstr "Mi√©"
+msgstr "miÈ"
 
 #: cal.c:38
 msgid "thu"
-msgstr "Jue"
+msgstr "jue"
 
 #: cal.c:38
 msgid "fri"
-msgstr "Vie"
+msgstr "vie"
 
 #: cal.c:38
 msgid "sat"
-msgstr "S√°b"
+msgstr "s·b"
 
 #: cal.c:42 cal.c:43
 msgid "su"
-msgstr "Do"
+msgstr "do"
 
 #: cal.c:42
 msgid "mo"
-msgstr "Lu"
+msgstr "lu"
 
 #: cal.c:42
 msgid "tu"
-msgstr "Ma"
+msgstr "ma"
 
 #: cal.c:42
 msgid "we"
-msgstr "Mi"
+msgstr "mi"
 
 #: cal.c:43
 msgid "th"
-msgstr "Ju"
+msgstr "ju"
 
 #: cal.c:43
 msgid "fr"
-msgstr "Vi"
+msgstr "vi"
 
 #: cal.c:43
 msgid "sa"
-msgstr "S√°"
+msgstr "s·"
 
 #: cal.c:85
 msgid "package"
-msgstr "Paquete"
+msgstr "paquete"
 
 #: cal.c:85
 msgid "version"
-msgstr "Versi√≥n"
+msgstr "versiÛn"
 
 #: cal.c:103
 msgid "incorrect number of parameters"
-msgstr "N√∫mero incorrecto de par√°metros."
+msgstr "n˙mero incorrecto de par·metros."
 
 #: cal.c:112
 msgid "incorrect second parameter"
-msgstr "Segundo par√°metro incorrecto."
+msgstr "segundo par·metro incorrecto."
 
 #: cal.c:124
 msgid "incorrect first parameter"
-msgstr "Primer par√°metro incorrecto."
+msgstr "primer par·metro incorrecto."
