@@ -3,7 +3,7 @@ version=2.0
 prefix=/usr
 bindir=$(prefix)/bin
 localedir=$(prefix)/share/locale
-langs=es_ES.UTF-8 es_ES.ISO-8859-1 en_GB.UTF-8 fi_FI.UTF-8
+langs=en_GB en_GB.UTF-8 en_US es_ES.ISO-8859-1 es_ES.UTF-8 fi_FI fi_FI.UTF-8
 targets=cal $(langs:=.mo)
 
 CFLAGS += -DPACKAGE=\""$(package)"\" \
