@@ -105,7 +105,7 @@ int main(int argc, char **argv)
 
     case 2: /* TWO PARAMETERS */
         i = atoi(argv[1]);
-        if (i < 0) {
+        if (i <= 0) {
             fprintf(stderr,
                     "%s: %s\n",
                     nomprog,
@@ -117,7 +117,7 @@ int main(int argc, char **argv)
         /* NO BREAK HERE */
     case 1: /* ONE PARAMETER */
         i = atoi(argv [0]);
-        if (i < 0){
+        if (i <= 0){
             fprintf(stderr,
                 	"%s: %s\n",
                 	nomprog,
