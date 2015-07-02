@@ -1,0 +1,142 @@
+# CAL.
+# Copyright (C) 2015
+# This file is distributed under the same license as the CAL package.
+# LUIS COLORADO <luiscoloradourcola@gmail.com>, 2015.
+#
+#, 
+msgid ""
+msgstr ""
+"Project-Id-Version: CAL 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-14 17:35+0300\n"
+"PO-Revision-Date: 2015-06-14 17:45+0300\n"
+"Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ascii\n"
+"Content-Transfer-Encoding: 7bit\n"
+
+#: cal.c:30
+msgid "january"
+msgstr "Enero"
+
+#: cal.c:30
+msgid "february"
+msgstr "Febrero"
+
+#: cal.c:30
+msgid "march"
+msgstr "Marzo"
+
+#: cal.c:31
+msgid "april"
+msgstr "Abril"
+
+#: cal.c:31
+msgid "may"
+msgstr "Mayo"
+
+#: cal.c:31
+msgid "june"
+msgstr "Junio"
+
+#: cal.c:32
+msgid "july"
+msgstr "Julio"
+
+#: cal.c:32
+msgid "august"
+msgstr "Agosto"
+
+#: cal.c:32
+msgid "september"
+msgstr "Septiembre"
+
+#: cal.c:33
+msgid "october"
+msgstr "Octubre"
+
+#: cal.c:33
+msgid "november"
+msgstr "Noviembre"
+
+#: cal.c:33
+msgid "december"
+msgstr "Diciembre"
+
+#: cal.c:37
+msgid "sun"
+msgstr "Dom"
+
+#: cal.c:37
+msgid "mon"
+msgstr "Lun"
+
+#: cal.c:37
+msgid "tue"
+msgstr "Mar"
+
+#: cal.c:37
+msgid "wed"
+msgstr "Mie"
+
+#: cal.c:38
+msgid "thu"
+msgstr "Jue"
+
+#: cal.c:38
+msgid "fri"
+msgstr "Vie"
+
+#: cal.c:38
+msgid "sat"
+msgstr "Sab"
+
+#: cal.c:42 cal.c:43
+msgid "su"
+msgstr "Do"
+
+#: cal.c:42
+msgid "mo"
+msgstr "Lu"
+
+#: cal.c:42
+msgid "tu"
+msgstr "Ma"
+
+#: cal.c:42
+msgid "we"
+msgstr "Mi"
+
+#: cal.c:43
+msgid "th"
+msgstr "Ju"
+
+#: cal.c:43
+msgid "fr"
+msgstr "Vi"
+
+#: cal.c:43
+msgid "sa"
+msgstr "Sa"
+
+#: cal.c:85
+msgid "package"
+msgstr "Paquete"
+
+#: cal.c:85
+msgid "version"
+msgstr "Version"
+
+#: cal.c:103
+msgid "incorrect number of parameters"
+msgstr "Numero incorrecto de parametros."
+
+#: cal.c:112
+msgid "incorrect second parameter"
+msgstr "Segundo parametro incorrecto."
+
+#: cal.c:124
+msgid "incorrect first parameter"
+msgstr "Primer parametro incorrecto."

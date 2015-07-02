@@ -1,9 +1,9 @@
 package=cal
 version=2.0
-prefix=/usr
+prefix=${HOME}
 bindir=$(prefix)/bin
 localedir=$(prefix)/share/locale
-langs=en_GB en_GB.UTF-8 en_US es_ES.ISO-8859-1 es_ES.UTF-8 fi_FI fi_FI.UTF-8
+langs=en_GB en_GB.utf8 en_US es_ES.iso88591 es_ES.utf8 es_ES fi_FI fi_FI.utf8
 targets=cal $(langs:=.mo)
 
 CFLAGS += -DPACKAGE=\""$(package)"\" \
