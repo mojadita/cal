@@ -51,8 +51,9 @@ size_t mbstrlen(char *s)
     size_t res = 0;
     size_t l = strlen(s);
     int n;
-    while ((n = mblen(s, l)) > 0)
-        res++, l -= n, s += n;
+    while ((n = mblen(s, l)) > 0) {
+        res++; l -= n; s += n;
+    }
     return res;
 } /* mbstrlen */
 
@@ -152,7 +153,7 @@ void formato_largo(int anio)
     int dia[3], desfase[3], mes[3], i, j, k, l;
     int hl[3], ml[3], tl[3];
 	char cad [10];
-    size_t n;
+    int n;
 
 	n = sprintf(cad, "%d", anio);
 

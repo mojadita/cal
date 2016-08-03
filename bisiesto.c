@@ -59,20 +59,11 @@
  *
  */
 
-
-#define BISIESTO                      1
-#define NORMAL                        0
-
-int bisiesto (anio)
+int bisiesto (int anio)
 {
-     if (anio < 1752) {
-		if (anio % 4 == 0) return BISIESTO;
-		return NORMAL;
-	 } /* if */
-     if (anio % 400 == 0) return BISIESTO;
-     if (anio % 100 == 0) return NORMAL;
-     if (anio % 4 == 0) return BISIESTO;
-	 return NORMAL;
+     return (anio <= 1582)
+         ? !(anio % 4)
+         : !(anio % 400) && (anio % 100) && !(anio % 4);
 } /* bisiesto */
 
 /* $Id: bisiesto.c,v 1.5 2004/10/12 19:39:31 luis Exp $ */

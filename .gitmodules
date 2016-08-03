@@ -1,0 +1,3 @@
+[submodule "easter"]
+	path = easter
+	url = git@github.com:mojadita/easter.git

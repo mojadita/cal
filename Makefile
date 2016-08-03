@@ -1,3 +1,11 @@
+# Author: Luis Colorado <luiscoloradourcola@gmail.com>
+# Date: (long time ago, back to 1988, probably)
+# Disclaimer: (C) ...2016 Luis Colorado.  THIS PROGRAM IS OPEN SOURCE
+#
+# You can freely copy and distribute this program according to BSD licencse.
+# The author doesn't assume any liability or resposibility by the usage of
+# this program.  You are the only responsible of using it as you may like.
+
 package=cal
 version=2.0
 prefix=$(HOME)
@@ -23,7 +31,7 @@ cal_libs=-lintl
 
 all: $(targets)
 clean:
-	$(RM) $(targets) $(foreach i, $(targets), $($(i)_objs))
+	$(RM) $(targets) $(cal_objs)
 install: $(targets)
 	$(INSTALL) $(IDFLAGS) $(localedir)
 	$(INSTALL) $(IDFLAGS) $(bindir)

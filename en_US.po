@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CAL 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-14 17:35+0300\n"
+"POT-Creation-Date: 2016-08-03 14:58+0300\n"
 "PO-Revision-Date: 2015-06-14 17:41+0300\n"
 "Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,22 +121,22 @@ msgstr "Fr"
 msgid "sa"
 msgstr "Sa"
 
-#: cal.c:85
+#: cal.c:85 cal.c:86
 msgid "package"
 msgstr "Package"
 
-#: cal.c:85
+#: cal.c:85 cal.c:86
 msgid "version"
 msgstr "Version"
 
-#: cal.c:103
+#: cal.c:103 cal.c:104
 msgid "incorrect number of parameters"
 msgstr "Invalid number of parameters."
 
-#: cal.c:112
+#: cal.c:112 cal.c:113
 msgid "incorrect second parameter"
 msgstr "Invalid second parameter."
 
-#: cal.c:124
+#: cal.c:124 cal.c:125
 msgid "incorrect first parameter"
 msgstr "Invalid first parameter."
