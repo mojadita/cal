@@ -18,8 +18,8 @@ IFFLAGS = -m 444
 IXFLAGS = -m 111
 IDFLAGS = -m 755 -d
 
-cal_objs=cal.o dia_sema.o bisiesto.o siguient.o
-cal_libs=-lintl
+cal_objs=cal.o weekday.o bisiesto.o nextday.o
+cal_libs= #-lintl
 
 all: $(targets)
 clean:

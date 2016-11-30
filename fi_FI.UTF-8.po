@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the CAL package.
 # LUIS COLORADO <luiscoloradourcola@gmail.com>, 2015.
 #
-#, 
 msgid ""
 msgstr ""
 "Project-Id-Version: CAL 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-14 17:35+0300\n"
+"POT-Creation-Date: 2016-11-30 21:14+0200\n"
 "PO-Revision-Date: 2015-06-14 17:45+0300\n"
 "Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,79 +16,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cal.c:30
+#: cal.c:30 cal.c:31
 msgid "january"
 msgstr "Tammikuu"
 
-#: cal.c:30
+#: cal.c:30 cal.c:31
 msgid "february"
 msgstr "Helmikuu"
 
-#: cal.c:30
+#: cal.c:30 cal.c:31
 msgid "march"
 msgstr "Marssi"
 
-#: cal.c:31
+#: cal.c:31 cal.c:32
 msgid "april"
 msgstr "Huhtikuu"
 
-#: cal.c:31
+#: cal.c:31 cal.c:32
 msgid "may"
 msgstr "Saattaa"
 
-#: cal.c:31
+#: cal.c:31 cal.c:32
 msgid "june"
 msgstr "Kesäkuu"
 
-#: cal.c:32
+#: cal.c:32 cal.c:33
 msgid "july"
 msgstr "Heinäkuu"
 
-#: cal.c:32
+#: cal.c:32 cal.c:33
 msgid "august"
 msgstr "elokuu"
 
-#: cal.c:32
+#: cal.c:32 cal.c:33
 msgid "september"
 msgstr "Syyskuu"
 
-#: cal.c:33
+#: cal.c:33 cal.c:34
 msgid "october"
 msgstr "Lokakuu"
 
-#: cal.c:33
+#: cal.c:33 cal.c:34
 msgid "november"
 msgstr "Marraskuu"
 
-#: cal.c:33
+#: cal.c:33 cal.c:34
 msgid "december"
 msgstr "Joulukuu"
 
-#: cal.c:37
+#: cal.c:37 cal.c:38
 msgid "sun"
 msgstr "Sun"
 
-#: cal.c:37
+#: cal.c:37 cal.c:38
 msgid "mon"
 msgstr "Man"
 
-#: cal.c:37
+#: cal.c:37 cal.c:38
 msgid "tue"
 msgstr "Tii"
 
-#: cal.c:37
+#: cal.c:37 cal.c:38
 msgid "wed"
 msgstr "Kes"
 
-#: cal.c:38
+#: cal.c:38 cal.c:39
 msgid "thu"
 msgstr "Tor"
 
-#: cal.c:38
+#: cal.c:38 cal.c:39
 msgid "fri"
 msgstr "Per"
 
-#: cal.c:38
+#: cal.c:38 cal.c:39
 msgid "sat"
 msgstr "Lau"
 
@@ -97,46 +96,51 @@ msgstr "Lau"
 msgid "su"
 msgstr "Su"
 
-#: cal.c:42
+#: cal.c:42 cal.c:43
 msgid "mo"
 msgstr "Ma"
 
-#: cal.c:42
+#: cal.c:42 cal.c:43
 msgid "tu"
 msgstr "Ti"
 
-#: cal.c:42
+#: cal.c:42 cal.c:43
 msgid "we"
 msgstr "Ke"
 
-#: cal.c:43
+#: cal.c:43 cal.c:44
 msgid "th"
 msgstr "To"
 
-#: cal.c:43
+#: cal.c:43 cal.c:44
 msgid "fr"
 msgstr "Pe"
 
-#: cal.c:43
+#: cal.c:43 cal.c:44
 msgid "sa"
 msgstr "Sa"
 
-#: cal.c:85
+#: cal.c:85 cal.c:89 cal.c:91 cal.c:92 cal.c:98 cal.c:138 cal.c:137 cal.c:159
+#: cal.c:160 cal.c:164 cal.c:161 cal.c:158 cal.c:154
 msgid "package"
 msgstr "Paketti"
 
-#: cal.c:85
+#: cal.c:85 cal.c:89 cal.c:91 cal.c:92 cal.c:98 cal.c:138 cal.c:137 cal.c:159
+#: cal.c:160 cal.c:164 cal.c:161 cal.c:158 cal.c:154
 msgid "version"
 msgstr "Versio"
 
-#: cal.c:103
+#: cal.c:103 cal.c:107 cal.c:109 cal.c:110 cal.c:116 cal.c:153 cal.c:152
+#: cal.c:174 cal.c:175 cal.c:179 cal.c:176 cal.c:173 cal.c:169
 msgid "incorrect number of parameters"
 msgstr "Virheelliset parametrien määra."
 
-#: cal.c:112
+#: cal.c:112 cal.c:116 cal.c:118 cal.c:119 cal.c:125 cal.c:159 cal.c:158
+#: cal.c:180 cal.c:181 cal.c:185 cal.c:182 cal.c:179 cal.c:175
 msgid "incorrect second parameter"
 msgstr "Virheelliset toinen parametri."
 
-#: cal.c:124
+#: cal.c:124 cal.c:128 cal.c:130 cal.c:131 cal.c:137 cal.c:168 cal.c:167
+#: cal.c:189 cal.c:190 cal.c:194 cal.c:191 cal.c:188 cal.c:184
 msgid "incorrect first parameter"
 msgstr "Virheelliset ensimmäinen parametri."
