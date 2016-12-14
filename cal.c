@@ -67,7 +67,7 @@ size_t mbstrlen(char *s)
     mbstate_t st = {0};
     int i = 0;
 
-    size_t n;
+    ssize_t n;
 #if 0
     printf(D("[%s]:"), s);
 #endif

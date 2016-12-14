@@ -1,44 +1,44 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# CAL, print a calendar on stdout.
+# Copyright (C) 1995-2016
+# This file is distributed under the same license as the CAL package.
+# Luis Colorado, 1995-2016.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: CAL 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-14 09:20+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2016-12-14 09:39+0200\n"
+"PO-Revision-Date: 2016-DEC-14 09:42+EET\n"
+"Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
+"Language-Team: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: cal.c:103 cal.c:107 cal.c:109 cal.c:110 cal.c:116 cal.c:153 cal.c:152
-#: cal.c:174 cal.c:175 cal.c:179 cal.c:176 cal.c:173 cal.c:169 cal.c:169
-#: cal.c:170
+#: cal.c:174 cal.c:175 cal.c:179 cal.c:176 cal.c:173 cal.c:169 cal.c:169
+#: cal.c:170 cal.c:177
 msgid "incorrect number of parameters"
 msgstr ""
 
 #: cal.c:112 cal.c:116 cal.c:118 cal.c:119 cal.c:125 cal.c:159 cal.c:158
-#: cal.c:180 cal.c:181 cal.c:185 cal.c:182 cal.c:179 cal.c:175 cal.c:175
-#: cal.c:176
+#: cal.c:180 cal.c:181 cal.c:185 cal.c:182 cal.c:179 cal.c:175 cal.c:175
+#: cal.c:176 cal.c:183
 msgid "incorrect second parameter"
 msgstr ""
 
 #: cal.c:124 cal.c:128 cal.c:130 cal.c:131 cal.c:137 cal.c:168 cal.c:167
-#: cal.c:189 cal.c:190 cal.c:194 cal.c:191 cal.c:188 cal.c:184 cal.c:184
-#: cal.c:185
+#: cal.c:189 cal.c:190 cal.c:194 cal.c:191 cal.c:188 cal.c:184 cal.c:184
+#: cal.c:185 cal.c:192
 msgid "incorrect first parameter"
 msgstr ""
 
-#: cal.c:154 cal.c:155 cal.c:158
+#: cal.c:154 cal.c:155 cal.c:158 cal.c:159 cal.c:161 cal.c:162
 msgid "package"
 msgstr ""
 
-#: cal.c:154 cal.c:155 cal.c:158
+#: cal.c:154 cal.c:155 cal.c:158 cal.c:159 cal.c:161 cal.c:162
 msgid "version"
 msgstr ""
