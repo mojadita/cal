@@ -10,7 +10,7 @@ CFLAGS +=	-I/usr/local/include \
 		-DPACKAGE=\""$(package)"\" \
 		-DVERSION=\""$(version)"\" \
 		-DLOCALEDIR=\""$(localedir)"\"
-LDFLAGS +=	-L/usr/local/lib
+LDFLAGS +=	-L/usr/local/lib -lintl
 
 INSTALL = install
 RM	= rm -f
@@ -18,7 +18,7 @@ IFFLAGS = -m 444
 IXFLAGS = -m 111
 IDFLAGS = -m 755 -d
 
-cal_objs=cal.o weekday.o bisiesto.o nextday.o
+cal_objs=cal.o weekday.o leap.o nextday.o
 cal_libs= #-lintl
 
 all: $(targets)
@@ -47,3 +47,8 @@ $(package).pot: $(cal_objs:.o=.c)
 
 $(langs:=.po): $(package).pot
 	msgmerge -U $@ $?
+
+.depend:
+	$(CC) -MM $(cal_objs:.o=.c) >$@
+
+-include .depend

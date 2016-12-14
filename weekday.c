@@ -4,6 +4,9 @@
  * Fecha: 1990.01.15
  */
 
+#include "leap.h"
+#include "weekday.h"
+
 int first_year_day(int year)
 {
 
@@ -33,7 +36,7 @@ int first_year_day(int year)
 int first_month_day(int month, int year)
 {
         static int days_month[12][3] = {
-         /* normal, bisiesto, 1752 */
+         /* normal, leap,    1752 */
             {0,      0,        0,}, /* ENERO */
             {3,      3,        3,}, /* FEBRERO */
             {3,      4,        4,}, /* MARZO */
@@ -49,11 +52,11 @@ int first_month_day(int month, int year)
         };
         month--;
         if (year == 1752)
-           return (first_year_day (year) + days_month [month][2]) % 7;
+           return (first_year_day(year) + days_month[month][2]) % 7;
 
-        if (bisiesto (year))
-           return (first_year_day (year) + days_month [month][1]) % 7;
-        return (first_year_day (year) + days_month [month][0]) % 7;
+        if (leap(year))
+           return (first_year_day(year) + days_month[month][1]) % 7;
+        return (first_year_day(year) + days_month[month][0]) % 7;
 } /* first_month_day */
 
 int week_day (int day, int month, int year)

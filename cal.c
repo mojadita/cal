@@ -16,6 +16,10 @@
 #include <locale.h>
 #include <time.h>
 
+#include "nextday.h"
+#include "weekday.h"
+#include "leap.h"
+
 #define NMONTHS     12
 #define NDAYS       7
 
@@ -212,12 +216,12 @@ void long_format(int year)
     int day[3], offset[3], month[3], i, j, k, l;
     int hl[3], ml[3], tl[3];
 	char str [10];
-    size_t n;
+    ssize_t n;
 
 	n = sprintf(str, "%d", year);
 
-    printf("\n\n%*s\n", 38 + n/2, str);
-    printf("%*.*s\n", 38 + n/2, n, "============");
+    printf("\n\n%*s\n", 38 + (int)n/2, str);
+    printf("%*.*s\n", 38 + (int)n/2, (int)n, "============");
 
     printf("\n--------------------------------------"
         	 "--------------------------------------\n");
@@ -256,7 +260,7 @@ void long_format(int year)
 			for (k = 0; k < 7; k++) {
 				printf("%s%.*s",
 					k ? " " : "",
-                    days[(k + fdow)%7].di_l2,
+                    (int)days[(k + fdow)%7].di_l2,
                     days[(k + fdow)%7].di_name);
 			} /* for */
 		} /* for */
@@ -312,7 +316,7 @@ void short_format(int month, int year)
 	for (i = 0; i < 7; i++)
 		printf("%s%.*s",
                 i ? " " : "",
-                days[(i + fdow)%7].di_l3,
+                (int)days[(i + fdow)%7].di_l3,
                 days[(i + fdow)%7].di_name);
 	printf("\n");
     printf("===========================\n");

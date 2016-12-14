@@ -5,6 +5,9 @@
  * Date: 1990.01.15
  */
 
+#include "leap.h"
+#include "nextday.h"
+
 #define       JAN        1
 #define       FEB        2
 #define       MAR        3
@@ -17,7 +20,6 @@
 #define       OCT       10
 #define       NOV       11
 #define       DEC       12
-
 
 int next_day(int day, int month, int year)
 {
@@ -39,7 +41,7 @@ int next_day(int day, int month, int year)
                  return -1;
          return ++day;
     case FEB:
-         if (bisiesto (year)){
+         if (leap(year)){
             if (day < 1 || day >= 29)
                     return -1;
          } /* if */
@@ -50,6 +52,6 @@ int next_day(int day, int month, int year)
     default:
          return -1;
     } /* switch */
-} /* siguiente */
+} /* next_day */
 
 /* $Id: siguient.c,v 1.5 2015/06/14 21:01:22 luis Exp $ */
