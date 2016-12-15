@@ -6,3 +6,4 @@ cal
 *.mo
 *~
 pru
+.depend

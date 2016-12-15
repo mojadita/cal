@@ -60,3 +60,8 @@ $(package).pot: $(cal_objs:.o=.c)
 
 $(langs:=.po): $(package).pot
 	msgmerge -U $@ $?
+
+.depend:
+	$(CC) -MM $(cal_objs:.o=.c) >$@
+
+-include .depend

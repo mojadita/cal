@@ -6,6 +6,7 @@
  */
 
 #include "nextday.h"
+#include "leap.h"
 
 int next_day(int day, int month, int year)
 {
@@ -38,7 +39,6 @@ int next_day(int day, int month, int year)
     default:
          return -1;
     } /* switch */
-
 } /* next_day */
 
 /* $Id: siguient.c,v 1.5 2015/06/14 21:01:22 luis Exp $ */
