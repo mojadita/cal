@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CAL 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-14 17:35+0300\n"
+"POT-Creation-Date: 2016-12-16 00:48+0200\n"
 "PO-Revision-Date: 2015-06-14 17:41+0300\n"
 "Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,126 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cal.c:30
-msgid "january"
-msgstr "January"
-
-#: cal.c:30
-msgid "february"
-msgstr "February"
-
-#: cal.c:30
-msgid "march"
-msgstr "March"
-
-#: cal.c:31
-msgid "april"
-msgstr "April"
-
-#: cal.c:31
-msgid "may"
-msgstr "May"
-
-#: cal.c:31
-msgid "june"
-msgstr "June"
-
-#: cal.c:32
-msgid "july"
-msgstr "July"
-
-#: cal.c:32
-msgid "august"
-msgstr "August"
-
-#: cal.c:32
-msgid "september"
-msgstr "September"
-
-#: cal.c:33
-msgid "october"
-msgstr "October"
-
-#: cal.c:33
-msgid "november"
-msgstr "November"
-
-#: cal.c:33
-msgid "december"
-msgstr "December"
-
-#: cal.c:37
-msgid "sun"
-msgstr "Sun"
-
-#: cal.c:37
-msgid "mon"
-msgstr "Mon"
-
-#: cal.c:37
-msgid "tue"
-msgstr "Tue"
-
-#: cal.c:37
-msgid "wed"
-msgstr "Wed"
-
-#: cal.c:38
-msgid "thu"
-msgstr "Thu"
-
-#: cal.c:38
-msgid "fri"
-msgstr "Fri"
-
-#: cal.c:38
-msgid "sat"
-msgstr "Sat"
-
-#: cal.c:42 cal.c:43
-msgid "su"
-msgstr "Su"
-
-#: cal.c:42
-msgid "mo"
-msgstr "Mo"
-
-#: cal.c:42
-msgid "tu"
-msgstr "Tu"
-
-#: cal.c:42
-msgid "we"
-msgstr "We"
-
-#: cal.c:43
-msgid "th"
-msgstr "Th"
-
-#: cal.c:43
-msgid "fr"
-msgstr "Fr"
-
-#: cal.c:43
-msgid "sa"
-msgstr "Sa"
-
-#: cal.c:85
-msgid "package"
-msgstr "Package"
-
-#: cal.c:85
-msgid "version"
-msgstr "Version"
-
-#: cal.c:103
+#: cal.c:103 cal.c:107 cal.c:109 cal.c:110 cal.c:116 cal.c:153 cal.c:152
+#: cal.c:174 cal.c:175 cal.c:179 cal.c:176 cal.c:173 cal.c:169
 msgid "incorrect number of parameters"
 msgstr "Invalid number of parameters."
 
-#: cal.c:112
+#: cal.c:112 cal.c:116 cal.c:118 cal.c:119 cal.c:125 cal.c:159 cal.c:158
+#: cal.c:180 cal.c:181 cal.c:185 cal.c:182 cal.c:179 cal.c:175
 msgid "incorrect second parameter"
 msgstr "Invalid second parameter."
 
-#: cal.c:124
+#: cal.c:124 cal.c:128 cal.c:130 cal.c:131 cal.c:137 cal.c:168 cal.c:167
+#: cal.c:189 cal.c:190 cal.c:194 cal.c:191 cal.c:188 cal.c:184
 msgid "incorrect first parameter"
 msgstr "Invalid first parameter."
+
+#: cal.c:158
+msgid "package"
+msgstr ""
+
+#: cal.c:158
+msgid "version"
+msgstr ""

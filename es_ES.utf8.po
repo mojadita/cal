@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the CAL package.
 # LUIS COLORADO <luiscoloradourcola@gmail.com>, 2015.
 #
-#, 
 msgid ""
 msgstr ""
 "Project-Id-Version: CAL 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-14 17:35+0300\n"
+"POT-Creation-Date: 2016-12-16 00:48+0200\n"
 "PO-Revision-Date: 2015-06-14 17:45+0300\n"
 "Last-Translator: LUIS COLORADO <luiscoloradourcola@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,126 +16,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cal.c:30
-msgid "january"
-msgstr "Enero"
-
-#: cal.c:30
-msgid "february"
-msgstr "Febrero"
-
-#: cal.c:30
-msgid "march"
-msgstr "Marzo"
-
-#: cal.c:31
-msgid "april"
-msgstr "Abril"
-
-#: cal.c:31
-msgid "may"
-msgstr "Mayo"
-
-#: cal.c:31
-msgid "june"
-msgstr "Junio"
-
-#: cal.c:32
-msgid "july"
-msgstr "Julio"
-
-#: cal.c:32
-msgid "august"
-msgstr "Agosto"
-
-#: cal.c:32
-msgid "september"
-msgstr "Septiembre"
-
-#: cal.c:33
-msgid "october"
-msgstr "Octubre"
-
-#: cal.c:33
-msgid "november"
-msgstr "Noviembre"
-
-#: cal.c:33
-msgid "december"
-msgstr "Diciembre"
-
-#: cal.c:37
-msgid "sun"
-msgstr "Dom"
-
-#: cal.c:37
-msgid "mon"
-msgstr "Lun"
-
-#: cal.c:37
-msgid "tue"
-msgstr "Mar"
-
-#: cal.c:37
-msgid "wed"
-msgstr "Mié"
-
-#: cal.c:38
-msgid "thu"
-msgstr "Jue"
-
-#: cal.c:38
-msgid "fri"
-msgstr "Vie"
-
-#: cal.c:38
-msgid "sat"
-msgstr "Sáb"
-
-#: cal.c:42 cal.c:43
-msgid "su"
-msgstr "Do"
-
-#: cal.c:42
-msgid "mo"
-msgstr "Lu"
-
-#: cal.c:42
-msgid "tu"
-msgstr "Ma"
-
-#: cal.c:42
-msgid "we"
-msgstr "Mi"
-
-#: cal.c:43
-msgid "th"
-msgstr "Ju"
-
-#: cal.c:43
-msgid "fr"
-msgstr "Vi"
-
-#: cal.c:43
-msgid "sa"
-msgstr "Sá"
-
-#: cal.c:85
-msgid "package"
-msgstr "Paquete"
-
-#: cal.c:85
-msgid "version"
-msgstr "Versión"
-
-#: cal.c:103
+#: cal.c:103 cal.c:107 cal.c:109 cal.c:110 cal.c:116 cal.c:153 cal.c:152
+#: cal.c:174 cal.c:175 cal.c:179 cal.c:176 cal.c:173 cal.c:169
 msgid "incorrect number of parameters"
 msgstr "Número incorrecto de parámetros."
 
-#: cal.c:112
+#: cal.c:112 cal.c:116 cal.c:118 cal.c:119 cal.c:125 cal.c:159 cal.c:158
+#: cal.c:180 cal.c:181 cal.c:185 cal.c:182 cal.c:179 cal.c:175
 msgid "incorrect second parameter"
 msgstr "Segundo parámetro incorrecto."
 
-#: cal.c:124
+#: cal.c:124 cal.c:128 cal.c:130 cal.c:131 cal.c:137 cal.c:168 cal.c:167
+#: cal.c:189 cal.c:190 cal.c:194 cal.c:191 cal.c:188 cal.c:184
 msgid "incorrect first parameter"
 msgstr "Primer parámetro incorrecto."
+
+#: cal.c:158
+msgid "package"
+msgstr ""
+
+#: cal.c:158
+msgid "version"
+msgstr ""
