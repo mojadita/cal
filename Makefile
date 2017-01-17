@@ -26,6 +26,7 @@ IDFLAGS = -m 755 -d
 
 cal_objs=cal.o weekday.o leap.o nextday.o
 cal_libs= #-lintl
+.PHONY: all clean install deinstall uninstall
 
 all: $(targets)
 clean:
@@ -39,7 +40,7 @@ install: $(targets)
 		$(INSTALL) $(IDFLAGS) $(localedir)/$${l}/LC_MESSAGES; \
 		$(INSTALL) $(IFFLAGS) $${l}.mo $(localedir)/$${l}/LC_MESSAGES/$(package).mo; \
 	done
-deinstall:
+deinstall uninstall:
 	$(RM) $(bindir)/cal
 	-@for l in $(langs); \
 	do \
