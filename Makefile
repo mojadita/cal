@@ -6,26 +6,40 @@
 
 package=cal
 version=2.0
-prefix=$(HOME)
-bindir=$(prefix)/bin
-localedir=$(prefix)/share/locale
-langs=en_GB en_GB.utf8 en_US es_ES.iso88591 es_ES.utf8 es_ES fi_FI fi_FI.utf8
-targets=cal $(langs:=.mo)
 
-CFLAGS +=	-I/usr/local/include \
+OS              != uname -o
+
+prefix          ?= /usr/local
+bindir          ?= $(prefix)/bin
+localedir       ?=$(prefix)/share/locale
+
+langs-FreeBSD   ?=en_GB en_GB.utf8  en_US es_ES.iso88591 es_ES.utf8  es_ES fi_FI fi_FI.utf8
+langs-GNU/Linux ?=en_GB en_GB.UTF-8 en_US es_ES.iso88591 es_ES.UTF-8 es_ES fi_FI fi_FI.UTF-8
+
+langs           ?= $(langs-$(OS))
+
+targets         ?=cal $(langs:=.mo)
+
+
+CFLAGS  += -I/usr/local/include \
 		-DPACKAGE=\""$(package)"\" \
 		-DVERSION=\""$(version)"\" \
 		-DLOCALEDIR=\""$(localedir)"\"
+
 LDFLAGS +=	-L/usr/local/lib
 
-INSTALL = install
-RM	= rm -f
-IFFLAGS = -m 444
-IXFLAGS = -m 111
-IDFLAGS = -m 755 -d
+INSTALL ?= install
+RM	    ?= rm -f
+IFFLAGS ?= -m 444
+IXFLAGS ?= -m 111
+IDFLAGS ?= -m 755 -d
+
+cal_libs-FreeBSD   ?= -lintl
+cal_libs-GNU/Linux ?= 
 
 cal_objs=cal.o weekday.o leap.o nextday.o
-cal_libs= #-lintl
+cal_libs= $(cal_libs-$(OS))
+
 .PHONY: all clean install deinstall uninstall
 
 all: $(targets)
