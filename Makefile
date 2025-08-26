@@ -13,8 +13,8 @@ prefix          ?= /usr/local
 bindir          ?= $(prefix)/bin
 localedir       ?=$(prefix)/share/locale
 
-langs-FreeBSD   ?=en_GB en_GB.utf8  en_US es_ES.iso88591 es_ES.utf8  es_ES fi_FI fi_FI.utf8
-langs-GNU/Linux ?=en_GB en_GB.UTF-8 en_US es_ES.iso88591 es_ES.UTF-8 es_ES fi_FI fi_FI.UTF-8
+langs-FreeBSD   ?=en_GB en_GB.UTF-8 en_US es_ES.ISO-8859-1 es_ES.UTF-8 es_ES fi_FI fi_FI.UTF-8
+langs-GNU/Linux ?=en_GB en_GB.UTF-8 en_US es_ES.ISO-8859-1 es_ES.UTF-8 es_ES fi_FI fi_FI.UTF-8
 
 langs           ?= $(langs-$(OS))
 
